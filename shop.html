@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: black;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 20px;
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background: #00ff6a;
+      color: black;
+    }
+
+    .section {
+      text-align: center;
+      padding: 50px 20px;
+      flex-grow: 1;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .product h2 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .product p {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #00ff6a;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .buy-btn:hover {
+      background: #00cc55;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: #bbb;
+      font-size: 14px;
+      border-top: 1px solid #333;
+      width: 100%;
+    }
+
+    .footer .highlight {
+      color: #00ff6a;
+      font-weight: bold;
+    }
+
+    /* Modal styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-content {
+      background-color: #1a1a1a;
+      color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 24px;
+      cursor: pointer;
+      color: #bbb;
+    }
+
+    .confirm-btn,
+    .cancel-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    .confirm-btn {
+      background: #00ff6a;
+      color: #111;
+      margin-right: 10px;
+    }
+
+    .cancel-btn {
+      background: #444;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="workouts.html">Workouts</a>
+    <a href="training.html">Training Programs</a>
+    <a href="shop.html">Shop</a>
+    <a href="blog.html">Guides</a>
+    <a href="community.html">Community</a>
+    <a href="aboutus.html">About</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <section class="section">
+    <h1>Shop</h1>
+    <p>Browse our selection of fitness gear, supplements, and accessories.</p>
+    <div class="products">
+      <div class="product">
+        <img src="gloves.jpg" alt="Fitness Gloves" />
+        <h2>Fitness Gloves</h2>
+        <p>Durable and comfortable gloves for weight training.</p>
+        <a href="javascript:void(0);" class="buy-btn" onclick="openModal('Fitness Gloves')">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="wheyprotein.jpg" alt="Protein Powder" />
+        <h2>Protein Powder</h2>
+        <p>High-quality protein to support muscle growth.</p>
+        <a href="javascript:void(0);" class="buy-btn" onclick="openModal('Protein Powder')">Buy Now</a>
+      </div>
+      <div class="product">
+        <img src="5.jpg" alt="Resistance Bands" />
+        <h2>Resistance Bands</h2>
+        <p>Perfect for home workouts and stretching exercises.</p>
+        <a href="javascript:void(0);" class="buy-btn" onclick="openModal('Resistance Bands')">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Confirm Purchase</h2>
+      <p id="modalText">Are you sure you want to buy this item?</p>
+      <button class="confirm-btn" onclick="alert('Order confirmed!')">Yes, Buy Now</button>
+      <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 NextLevelFit. All rights reserved.</p>
+    <p>Designed & Developed by <span class="highlight">M.D. Legaspina</span></p>
+  </footer>
+
+  <script>
+    function openModal(productName) {
+      document.getElementById("modalText").innerText =
+        'Are you sure you want to buy "' + productName + '"?';
+      document.getElementById("productModal").style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("productModal").style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      let modal = document.getElementById("productModal");
+      if (event.target == modal) {
+        closeModal();
+      }
+    };
+  </script>
+</body>
+</html>

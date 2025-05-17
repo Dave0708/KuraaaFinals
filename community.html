@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Forum</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111; /* Dark background color */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .section {
+            text-align: center;
+            padding: 50px 20px;
+            flex-grow: 1;
+        }
+        .forum-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8); /* Dark background for forum container */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .forum-post {
+            border-bottom: 1px solid #333;
+            padding: 10px 0;
+        }
+        .forum-post h3 {
+            margin: 5px 0;
+            color: #00ff6a; /* Vibrant green color */
+        }
+        .forum-post p {
+            color: #bbb;
+        }
+        .post-button {
+            display: block;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background: #00ff6a; /* Vibrant green for button */
+            color: #111; /* Dark color for text */
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-align: center;
+            transition: 0.3s;
+            font-size: 16px;
+        }
+        .post-button:hover {
+            background: #00cc55; /* Slightly darker green on hover */
+        }
+        .trending {
+            text-align: left;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8); /* Dark background for trending section */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .trending h2 {
+            color: #00ff6a; /* Vibrant green for trending section title */
+        }
+        .trending ul {
+            list-style: none;
+            padding: 0;
+        }
+        .trending li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+        .trending li:hover {
+            color: #00ff6a; /* Green color on hover */
+        }
+        .quote {
+            text-align: center;
+            font-style: italic;
+            color: #00ff6a; /* Green quote text */
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: black; /* Black footer background */
+            color: #bbb;
+            font-size: 14px;
+            border-top: 1px solid #333;
+            width: 100%;
+            margin-top: auto;
+        }
+        .footer .highlight {
+            color: #00ff6a; /* Green highlight for developer name */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
+        <a class="navbar-brand" href="#" style="color: #00ff6a;">NextLevelFit</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="workouts.html" style="color: white;">Workouts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="training.html" style="color: white;">Training Programs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="shop.html" style="color: white;">Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html" style="color: white;">Guides</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="community.html" style="color: white;">Community</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html" style="color: white;">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html" style="color: white;">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <section class="section">
+        <h1>Community Forum</h1>
+        <p>Join discussions, share your fitness journey, and connect with others!</p>
+        
+        <div class="forum-container">
+            <div class="forum-post">
+                <h3>Jerome: Best Home Workouts?</h3>
+                <p>What are some effective exercises I can do at home without equipment?</p>
+            </div>
+            <div class="forum-post">
+                <h3>GregTheGreat: Nutrition Advice</h3>
+                <p>Looking for meal plans to help build muscle. Any suggestions?</p>
+            </div>
+            <div class="forum-post">
+                <h3>Luigi RunnerBoy: Best Running Shoes?</h3>
+                <p>What shoes do you recommend for long-distance running?</p>
+            </div>
+        </div>
+        
+        <div class="trending">
+            <h2>🔥 Trending Topics</h2>
+            <ul>
+                <li>Intermittent Fasting for Athletes</li>
+                <li>Best HIIT Workouts for Fat Loss</li>
+                <li>How to Stay Motivated on Rest Days</li>
+            </ul>
+        </div>
+        
+        <a href="#" class="post-button">Start a Discussion</a>
+        
+        <div class="quote">
+            "The only bad workout is the one that didn't happen."
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>© 2025 NextLevelFit. All rights reserved.</p>
+        <p>Designed & Developed by <span class="highlight">M.D. Legaspina</span></p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

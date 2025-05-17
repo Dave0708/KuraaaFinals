@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NextLevelFit</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #111;
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background: url('banner.jpg') center/cover no-repeat;
+      text-align: center;
+      padding: 150px 20px;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .header-content h1 {
+      font-size: 60px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-shadow: 0 0 15px rgba(0, 255, 106, 0.6);
+    }
+
+    .header-content span {
+      color: #00ff6a;
+    }
+
+    .header-content p {
+      font-size: 22px;
+      margin-top: 15px;
+      font-weight: bold;
+      opacity: 0.9;
+    }
+
+    .cta {
+      background-color: #00ff6a;
+      color: #111;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 8px;
+      display: inline-block;
+      font-weight: bold;
+      margin-top: 25px;
+      font-size: 1.3em;
+      transition: 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 255, 106, 0.4);
+    }
+
+    .cta:hover {
+      background-color: #00cc55;
+      transform: scale(1.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #222;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 15px 25px;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00ff6a;
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      max-width: 1100px;
+      margin: 50px auto;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 255, 106, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 0px 30px rgba(0, 255, 106, 0.3);
+    }
+
+    .section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #00ff6a;
+      text-transform: uppercase;
+    }
+
+    .section p {
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0.9;
+    }
+
+    .services-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .services-list li {
+      background: rgba(0, 255, 106, 0.08);
+      padding: 15px 25px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      border: 1px solid #00ff6a20;
+    }
+
+    .services-list li:hover {
+      background: #00ff6a;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      text-align: center;
+      padding: 25px;
+      background: #000;
+      color: #bbb;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    .footer .highlight {
+      color: #00ff6a;
+      font-weight: bold;
+    }
+
+    a {
+      color: #00ff6a;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html">Login</a>
+  </nav>
+
+  <header>
+    <div class="overlay"></div>
+    <div class="header-content">
+      <h1>Push Beyond <span>Limits</span></h1>
+      <p>Strength is built through discipline. Every rep, every drop of sweat brings you closer to your best self.</p>
+      <a href="auth.html" class="cta">Start Your Journey</a>
+    </div>
+  </header>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>At NextLevelFit, we believe fitness is more than just a routine it's a way of life. Whether you're aiming for strength, endurance, or overall well being, we're here to push you beyond your limits.</p>
+    <p>Our gym provides an elite training experience, with expert trainers and the latest equipment to help you achieve your goals.</p>
+
+    <ul class="services-list">
+      <li>📜 <strong>History:</strong> Built to redefine fitness through discipline and innovation.</li>
+      <li>💎 <strong>Core Values:</strong> Integrity, growth, and community support.</li>
+      <li>🧠 <strong>Philosophy:</strong> Train the mind, fuel the body, elevate the soul.</li>
+      <li>🎯 <strong>Mission:</strong> To empower and inspire a stronger you inside and out.</li>
+      <li>🚀 <strong>Vision:</strong> A lifestyle driven fitness revolution for all ages.</li>
+    </ul>
+  </section>
+
+  <section id="services" class="section">
+    <h2>Our Services</h2>
+    <p>Our programs are tailored for all fitness levels, focused on performance, longevity, and confidence.</p>
+    <ul class="services-list">
+      <li>🏋️ Weight Training</li>
+      <li>🔥 High-Intensity Workouts</li>
+      <li>🧘 Yoga & Meditation</li>
+      <li>🥗 Personalized Nutrition Plans</li>
+      <li>🏆 Body Transformation Programs</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Let’s connect! We’re here to answer your questions and help you start your fitness journey.</p>
+    <ul class="services-list">
+      <li>👤 <strong>Owner’s Name:</strong> Coach Michael Dave Legaspina</li>
+      <li>🏢 <strong>Company Name:</strong> NextLevelFit</li>
+      <li>📧 <strong>Email:</strong> nextlevelfit@gmail.com</li>
+      <li>📞 <strong>Contact Number:</strong> +6397701576</li>
+      <li>📍 <strong>Location:</strong> Brgy. Fairview, Quezon City</li>
+      <li>🏬 <strong>Branches:</strong> Quezon City, Pasig, Taguig</li>
+      <li>📍 <strong>Quezon City Branch:</strong> <a href="https://www.google.com/maps/place/Quezon+City" target="_blank">View on Google Maps</a></li>
+      <li>📍 <strong>Makati Branch:</strong> <a href="https://www.google.com/maps/place/Makati" target="_blank">View on Google Maps</a></li>
+      <li>📍 <strong>Taguig Branch:</strong> <a href="https://www.google.com/maps/place/Taguig" target="_blank">View on Google Maps</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 NextLevelFit. All rights reserved.</p>
+    <p>Designed & Developed by <span class="highlight">M.D. Legaspina</span></p>
+  </footer>
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

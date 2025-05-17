@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides</title>
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #111;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar-brand {
+            color: #00ff6a !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: #00ff6a !important;
+            color: black !important;
+        }
+
+        .section {
+            text-align: center;
+            padding: 70px 20px;
+            flex-grow: 1;
+            margin-top: 80px; /* Account for fixed navbar */
+        }
+
+        .section h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 24px;
+            color: #bbb;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-post {
+            background: rgba(0, 0, 0, 0.85);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 255, 106, 0.4);
+        }
+
+        .blog-post h2 {
+            font-size: 28px;
+            margin: 10px 0;
+            color: #00ff6a;
+        }
+
+        .blog-post p {
+            font-size: 18px;
+            color: #bbb;
+        }
+
+        .yt-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 20px;
+            background: #00ff6a;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .yt-button:hover {
+            background: #00cc55;
+        }
+
+        /* Footer styling */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            color: #bbb;
+            font-size: 14px;
+            border-top: 1px solid #333;
+        }
+
+        .footer .highlight {
+            color: #00ff6a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">NextLevelFit</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workouts.html">Workouts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="training.html">Training Programs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Guides</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="community.html">Community</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <section class="section">
+        <h1>Fitness Guides</h1>
+        <p>Read our latest articles on fitness, nutrition, and workouts.</p>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h2>5 Best Workouts for Building Muscle</h2>
+                <p>Discover the top exercises to help you build strength and muscle effectively.</p>
+                <a href="https://youtu.be/qu1pqo-dbXM?si=qkyqYQWGtIKq7rvd" class="yt-button" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="blog-post">
+                <h2>Nutrition Tips for Athletes</h2>
+                <p>Learn the best foods to eat to maximize your performance and recovery.</p>
+                <a href="https://youtu.be/GyxAGh7cVxo?si=qHdCSdkKW0Hiddmg" class="yt-button" target="_blank">Watch on YouTube</a>
+            </div>
+            <div class="blog-post">
+                <h2>How to Improve Your Cardio Workouts</h2>
+                <p>Get tips on how to increase endurance and efficiency in your cardio sessions.</p>
+                <a href="https://youtu.be/_8djNYprRDI?si=N8VByl8LMATnOpVr" class="yt-button" target="_blank">Watch on YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 NextLevelFit. All rights reserved.</p>
+        <p>Designed & Developed by <span class="highlight">M.D. Legaspina</span></p>
+    </footer>
+
+    <!-- Local Bootstrap JS -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

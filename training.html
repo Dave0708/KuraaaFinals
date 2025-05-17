@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Training Programs</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .navbar {
+      background-color: black;
+    }
+
+    .navbar-brand,
+    .nav-link {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    .nav-link:hover {
+      background: #00ff6a;
+      color: black !important;
+      border-radius: 5px;
+    }
+
+    .section {
+      padding: 50px 20px;
+      flex-grow: 1;
+    }
+
+    .section h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #bbb;
+      margin-bottom: 40px;
+    }
+
+    .program-card {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .program-card:hover {
+      transform: scale(1.05);
+    }
+
+    .program-card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .program-card h2 {
+      margin-top: 15px;
+      font-size: 24px;
+    }
+
+    .program-card p {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .explore-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #00ff6a;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .explore-btn:hover {
+      background: #00cc55;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: black;
+      color: #bbb;
+      font-size: 14px;
+      border-top: 1px solid #333;
+    }
+
+    .footer .highlight {
+      color: #00ff6a;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Responsive Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand text-success fw-bold" href="index.html">NextLevelFit</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav text-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="workouts.html">Workouts</a></li>
+        <li class="nav-item"><a class="nav-link" href="training.html">Training Programs</a></li>
+        <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Guides</a></li>
+        <li class="nav-item"><a class="nav-link" href="community.html">Community</a></li>
+        <li class="nav-item"><a class="nav-link" href="aboutus.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Section -->
+<section class="section">
+  <h1>Training Programs</h1>
+  <p>Unlock personalized training plans to match your fitness goals.</p>
+
+  <div class="program-card">
+    <img src="strength.jpg" alt="Strength Training Program" />
+    <h2>Strength Training</h2>
+    <p>Build muscle and increase endurance with expert-designed programs.</p>
+    <a href="#" class="explore-btn">Explore More</a>
+  </div>
+
+  <div class="program-card">
+    <img src="weightloss.jpg" alt="Weight Loss Program" />
+    <h2>Weight Loss</h2>
+    <p>Effective workouts to burn calories and shed fat efficiently.</p>
+    <a href="#" class="explore-btn">Explore More</a>
+  </div>
+
+  <div class="program-card">
+    <img src="cardio.jpg" alt="Cardio Fitness Program" />
+    <h2>Cardio Fitness</h2>
+    <p>Boost your stamina and heart health with high-energy routines.</p>
+    <a href="#" class="explore-btn">Explore More</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2025 NextLevelFit. All rights reserved.</p>
+  <p>Designed & Developed by <span class="highlight">M.D. Legaspina</span></p>
+</footer>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
